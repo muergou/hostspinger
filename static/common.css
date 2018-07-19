@@ -1,0 +1,321 @@
+/* CSS Document */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, *{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+html {
+    width:100%;
+    height: 100%;
+}
+body {
+    width:100%;
+    padding: 0;
+    margin: 0;
+    min-width: 1260px;
+    /*background: #cbe44b url(../imgs/dyin_bg.jpg) no-repeat top center ;*/
+    background-color: #2a2a2a;
+    background-size:cover;
+}
+ul li ,ol li{
+    list-style: none;
+}
+a, a:hover, a:focus {
+    text-decoration: none;
+    outline: none;
+    cursor:pointer;
+}
+dl,dt,dd{
+    display:block;
+    margin:0;
+}
+.clear{ clear:both;}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+strong {
+    font-weight: bold;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+input, textarea, select, button {
+    outline: none !important;
+}
+textarea{
+    resize: none;
+}
+button, select {
+    text-transform: none;
+}
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    outline: none;
+    font-size: inherit;
+}
+textarea {
+    resize: none;
+}
+.contain{
+    width:100%;
+    overflow: hidden;
+}
+.wraap{
+    width: 1260px;
+    margin: auto;
+    overflow: hidden;
+}
+.index_log{
+    padding-left: 26px;
+}
+.index_title{
+    position: relative;
+    width: 100%;
+    height: 644px;
+    /*background: url(../imgs/heardbg.png) no-repeat center center;*/
+    text-align: center;
+    overflow: hidden;
+}
+.in_btn{
+    width: 100%;
+    text-align: center;
+    position: relative;
+    margin-top: 488px;
+}
+.img_argin{
+    margin: 0 30px;
+}
+.footer{
+    width: 100%;
+    height: 120px;
+    overflow: hidden;
+    background:rgba(0,0,0,.4);
+    position: absolute;
+    bottom: 0;
+}
+.footer_main{
+    width: auto;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    padding: 12px 0 0 125px;
+    overflow: hidden;
+}
+.footer_main img{
+    height: 80px;
+    float: left;
+    margin-right: 125px;
+    margin-top: 10px;
+}
+.footer_info{
+    float: left;
+    padding-top: 14px;
+    overflow: hidden;
+}
+.footer_info span{
+    overflow: hidden;
+    display: inline-block;
+    line-height: 24px;
+    padding: 0 5px;
+    font-size: 14px;
+    color: #eff8d0;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+/*弹窗*/
+/*弹窗*/
+.pop_box{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    z-index: 5;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.52);
+    opacity: 1;
+    display: none;
+    z-index: 2000;
+    _position:absolute;
+    left:0;
+    top:0;
+}
+.pop_body{
+    width: 400px;
+    overflow: hidden;
+    -webkit-border-radius:5px ;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -200px;
+    margin-top: -142px;
+    z-index: -2;
+}
+.pop_header{
+    width: 98px;
+    height:76px;
+    -webkit-border-radius:98px;
+    -moz-border-radius:98px;
+    border-radius:98px;
+    background:#b2cb32;
+    border: 3px solid #fff;
+    margin: auto;
+    z-index: 5;
+    text-align:center;
+    padding-top: 22px;
+}
+
+.pop_bg{
+    width: 100%;
+    height: 48px;
+    -webkit-border-radius:6px 6px 0 0 ;
+    -moz-border-radius:6px 6px 0 0 ;
+    border-radius:6px 6px 0 0 ;
+    background: url(../imgs/con_bg.png) no-repeat center top;
+
+}
+.pop_content{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    top: -42px;
+    z-index: -1;
+    text-align: center;
+    -webkit-border-radius:5px ;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.pop_des{
+    width: 100%;
+    overflow: hidden;
+    height: 100px;
+    line-height: 46px;
+    text-align: center;
+    border-bottom: 1px solid #d2e862;
+    font-size: 22px;
+    color: #5f7100;
+    font-weight: bold;
+    background: #fff;
+}
+.pop_save{
+    width: 100%;
+    height: 71px;
+    line-height: 71px;
+    background: #b2cb32;
+    font-size:22px;
+    font-weight: bold;
+    color: #fff;
+}
+.pop_save a{cursor: pointer;color: #fff; width:100%; display: block;}
+/* 安卓二维码开始 */
+.android-wrap{
+    position: relative;
+    display: inline-block;
+    padding-top: 20px;
+}
+.android-img{
+    display: none;
+    width: 360px;
+    height: 380px;
+    position: absolute;
+    bottom: 134px;
+    left: 50%;
+    z-index: 99;
+    margin-left: -170px;
+    background: url(../imgs/android_code.png) no-repeat center center;
+}
+.main-bg{
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/*表格1-出现...*/
+table.collect-table {
+    table-layout: fixed;
+    color:white;
+
+}
+
+table.collect-table thead th {
+    background-color: #2a2a2a;
+    font-weight: bold;
+    /*border: 1px solid #d1dee2;*/
+    color: #383838;
+    text-align: center;
+    height: 38px;
+    line-height: 38px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 0 5px;
+}
+
+table.collect-table tr {
+    /*border: 1px solid #d2d2d2;*/
+    background-color: #2a2a2a;
+}
+
+table.collect-table tbody td {
+    vertical-align: middle;
+    text-align: center;
+    word-break: break-all;
+    word-wrap: break-word;
+    /*border: 1px solid #000000;*/
+
+    /*border: 1px solid white;*/
+    height: 38px;
+    line-height: 38px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 0 5px;
+
+}
+.td_green{
+    height: 90%;
+    background-color: #41a70c;
+}
+.td_red{
+    height: 90%;
+    background-color: #a72137;
+}
+.td_yellow{
+    height: 90%;
+    background-color: #a7a02b;
+}
+.td_pur{
+    height: 90%;
+    background-color: #a7682a;
+}
