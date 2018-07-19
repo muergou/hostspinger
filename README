@@ -1,3 +1,6 @@
+一个可以测试各个机房之间延迟的小工具
+
+
 使用方法：
 1、config.py里面写好服务器名称及地址，服务器之间不要开禁ping
 2、server端需要python 2.7版本及flask框架，client端需要python 2.6及以上。
