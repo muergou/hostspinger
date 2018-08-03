@@ -12,9 +12,9 @@
     <title>各机房网络延迟统计</title>
 </head>
 
-<body>
-<div style="width: 900px;padding-left:450px; padding-top: 200px">
-<script language="javascript">setInterval("self.location.reload();",30000);</script>
+<body >
+<div style="width: 900px;margin-left: auto;margin-right: auto;padding-top: 2%">
+<script language="javascript">setInterval("self.location.reload();",150000);</script>
 <table  width="100%" border="1" cellpadding="10" class="collect-table" cellspacing=100px>
     <tr>
         <td><div class="trr"></div></td>
@@ -27,7 +27,9 @@
             <tr>
                 <td><div class="trr">{{ source[loop.index0] }}</div></td>
                     {% for value in delay %}
-                        {% if value < 50  %}
+                        {% if value == 'timeout' %}
+                             <td><div class="td_red" >{{ value }}</div></td>
+                        {% elif value < 50  %}
                             <td><div class="td_green" >{{ value }}ms</div></td>
                         {% elif value >= 50 and value < 100  %}
                             <td><div class="td_yellow" >{{ value }}ms</div></td>

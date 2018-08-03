@@ -1,8 +1,6 @@
-一个可以测试各个机房之间延迟的小工具
-
-
 使用方法：
 1、config.py里面写好服务器名称及地址，服务器之间不要开禁ping
 2、server端需要python 2.7版本及flask框架，client端需要python 2.6及以上。
 3、server端启动 python server.py
 4、client.py里面改好服务器端口及地址，把client.py和ping.py复制到需要监控的机器上，启动定时任务每分钟执行一次client.py
+

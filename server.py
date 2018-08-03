@@ -11,21 +11,19 @@ for i in config.server_list.keys():
 
 @app.route('/')
 def display():
-    #print delay
-    dest = delay[1].keys()
+#    print delay
+    dest = delay[0].keys()
     del dest[dest.index('source')]
     source = []
     values = []
     for i in  delay:
         source.append(i['source'])
+        #source = sorted(source)
         value = []
         for j in i.keys():
             if j != 'source':
                 value.append(i[j])
         values.append(value)
-    '''print 'dest :' + str(dest)
-    print 'source :' + str(source)
-    print  'values : ' + str(values)'''
     return render_template('index.html',dest= dest,source=source,values=values)
 
 
@@ -36,6 +34,7 @@ def recv_data():
         if str(delay[i]['source']) == str(data['source']):
             delay[i] = data
             break
+    print data
     return 'success'
 
 
@@ -43,12 +42,13 @@ def recv_data():
 def server_list():
     source = request.remote_addr
     server_list= config.server_list
+ #   print server_list
     for i in server_list.keys():
         if str(server_list[i]) == str(source):
             source = i
             break
     server_list['source'] = source
-    #print server_list
+#    server_list = sorted(server_list)
     return json.dumps(server_list)
 
 if __name__ == '__main__':

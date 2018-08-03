@@ -2,12 +2,12 @@
 
 import httplib,ping,json
 
-server='127.0.0.1'
+server='47.91.19.196'
 
 
 def get_server_list():
     url = "http://%s/server_list" % server
-    conn = httplib.HTTPConnection(server,port=5000)
+    conn = httplib.HTTPConnection(server,port=9092)
     conn.request(method="GET",url=url)
     response = conn.getresponse()
     return response
@@ -15,7 +15,7 @@ def get_server_list():
 
 def post_data(post_data):
     url = "http://%s/data" % server
-    conn = httplib.HTTPConnection(server,port=5000)
+    conn = httplib.HTTPConnection(server,port=9092)
     conn.request(method="POST", url=url, body=post_data)
     response = conn.getresponse().read()
     return response

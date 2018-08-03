@@ -265,7 +265,7 @@ textarea {
 table.collect-table {
     table-layout: fixed;
     color:white;
-
+	margin-left:-150px;
 }
 
 table.collect-table thead th {
@@ -284,7 +284,10 @@ table.collect-table thead th {
 
 table.collect-table tr {
     /*border: 1px solid #d2d2d2;*/
+
     background-color: #2a2a2a;
+  
+    
 }
 
 table.collect-table tbody td {
@@ -301,6 +304,8 @@ table.collect-table tbody td {
     white-space: nowrap;
     text-overflow: ellipsis;
     padding: 0 5px;
+    width:100px;   
+ font-size: 12px;
 
 }
 .td_green{
