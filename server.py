@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 
-from flask import Flask,request,render_template
-import config,json
+from flask import Flask,request,render_template,send_from_directory
+import config,json,os
 
 app = Flask(__name__)
 delay = []
@@ -25,6 +25,11 @@ def display():
                 value.append(i[j])
         values.append(value)
     return render_template('index.html',dest= dest,source=source,values=values)
+
+
+@app.route('/favicon.ico') 
+def favicon(): 
+    return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
 
 @app.route('/data',methods=["POST"])
@@ -52,4 +57,4 @@ def server_list():
     return json.dumps(server_list)
 
 if __name__ == '__main__':
-    app.run(port=9092,host='0.0.0.0',debug=False)
+    app.run(port=9092,host='0.0.0.0',debug=True)
